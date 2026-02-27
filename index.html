@@ -1,16 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My First Cloud App</title>
-    <style>
-        body {
-            width: 100%;
+<style>
+  .cloud-table {
+    width: 100%;
     border-collapse: collapse;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    </style>
-</head>
-<body>
-    <h1>Hello World!</h1>
-    <p>This application was deployed to the cloud by an IT student.</p>
-</body>
-</html>
+    margin: 20px 0;
+  }
+  .cloud-table th, .cloud-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+  }
+  .cloud-table th {
+    background-color: #2c3e50;
+    color: white;
+  }
+  /* แถบสีสำหรับแต่ละโมเดล */
+  .saas-header { background-color: #27ae60 !important; color: white; } /* สีเขียว */
+  .paas-header { background-color: #2980b9 !important; color: white; } /* สีน้ำเงิน */
+  .iaas-header { background-color: #e67e22 !important; color: white; } /* สีส้ม */
+  
+  .category-col { background-color: #f9f9f9; font-weight: bold; width: 20%; }
+</style>
+
+<table class="cloud-table">
+  <thead>
+    <tr>
+      <th>ประเด็นเปรียบเทียบ</th>
+      <th class="saas-header">SaaS</th>
+      <th class="paas-header">PaaS</th>
+      <th class="iaas-header">IaaS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="category-col">ชื่อเต็ม</td>
+      <td>Software as a Service</td>
+      <td>Platform as a Service</td>
+      <td>Infrastructure as a Service</td>
+    </tr>
+    <tr>
+      <td class="category-col">รูปแบบการให้บริการ</td>
+      <td>ผู้ให้บริการจัดให้ทุกอย่าง ตั้งแต่โครงสร้างพื้นฐานจนถึงซอฟต์แวร์</td>
+      <td>ผู้ให้บริการจัดเตรียม Platform และ Runtime สำหรับรัน Code</td>
+      <td>ผู้ให้บริการจัดเตรียมทรัพยากรพื้นฐาน เช่น Server, Storage, Network</td>
+    </tr>
+    <tr>
+      <td class="category-col">สิ่งที่ผู้ใช้รับผิดชอบ</td>
+      <td>จัดการแค่ <b>ข้อมูล (Data)</b> และการตั้งค่าผู้ใช้</td>
+      <td>จัดการ <b>แอปพลิเคชัน</b> และฐานข้อมูลที่พัฒนาขึ้น</td>
+      <td>จัดการ <b>OS, Middleware, Runtime</b> และการติดตั้งแอปฯ ทั้งหมด</td>
+    </tr>
+    <tr>
+      <td class="category-col">ตัวอย่างจริง</td>
+      <td>Gmail, Microsoft 365, Zoom</td>
+      <td>Google App Engine, Heroku</td>
+      <td>AWS EC2, Azure VM, GCE</td>
+    </tr>
+  </tbody>
+</table>
+
